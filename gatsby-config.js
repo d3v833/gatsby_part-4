@@ -1,6 +1,13 @@
 module.exports = {
-  siteMetadata: {    title: `Panda's Eating Lot's`,  },
+  siteMetadata: { title: `Panda's Eating Lot's` },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { 
+        name: `src`, 
+        path: `${__dirname}/src/` 
+      },
+    },
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typography`,
